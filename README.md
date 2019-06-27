@@ -1,3 +1,71 @@
+# POKEMON GO
+
+Es un vídeojuego de realidad aumentada basado en la localización desarrollado por Niantic, Inc.1​2​ para dispositivos iOS y Android. Es un videojuego gratuito pero contiene microtransacciones. El juego consiste en buscar y capturar personajes de la saga Pokemón escondidos en ubicaciones del mundo real y luchar con ellos, lo que implica desplazarse físicamente por las calles de la ciudad para progresar. 
+
+La aplicación comporta un elemento de interacción social, ya que promueve reuniones físicas de los usuarios en distintas ubicaciones de sus poblaciones.
+
+![enter image description here](https://im.ziffdavisinternational.com/ign_es/screenshot/default/pokemongender_rw2m.jpg)
+
+Fuente: Forbes.
+
+Las cifras de 'Pokémon Go' durante el año 2016 han quedado reflejadas en ComScore, una famosa web que proporciona datos y estadísticas de muchas empresas. Ha día de hoy, lejos queda la excelente cifra que alcanzó la aplicación durante sus primeros meses de vida, llegando a los 28,5 millones de usuarios el 7 de Julio. A partir de ese momento el número ha descendido notablemente manteniéndose en una media de aproximadamente 10 millones de usuarios hasta diciembre, que cerró el año con poco más de seis millones.
+
+![enter image description here](https://media.redadn.es/imagenes/pokemon-go-android-ios_305212_post.png)
+
+Pokémon GO alcanza los 2.500 millones de dólares en ingresos a nivel mundial
+Estados Unidos es el país que más gasta en el título de realidad aumentada, con un 35% del total de los ingresos, lo que supone aproximadamente unos 875 millones de dólares. Por su parte, Japón ocupa la segunda posición con un 29% del total, unos 725 millones de dólares. Alemania cierra el podio con un 6% de gasto, lo que supone unos 150 millones de dólares.
+En cuanto al gasto por descarga, Japón ocupa la primera posición con un promedio de 42 millones de dólares. Al país asiático le sigue los Estados Unidos de América, con 9,50 millones de dólares. Además, también se confirma que Pokémon GO alcanzó la séptima plaza en cuanto a ingresos mundiales de juegos para móviles.
+
+## PROBLEMA DETECTADO
+
+Usuarios frustrados al no generarse una mayor experiencia después de determinado nivel.
+
+Los jugadores de mayor nivel tampoco reciben una recompensa adecuada que justifique su inversión de tiempo.
+
+El problema de Pokémon Go es que un entrenador de nivel 1 necesita capturar diez criaturas para subir de nivel, mientras que un jugador superior, de nivel 39, requiere de más de 20.000.
+
+## Testimonios
+
+	> El juego no premia con más puntos si se cazan a pokémones más evolucionados en los niveles más altos, algo que consideran desalentador para el jugador.
+
+    > Para subir del nivel 1 al 2 son necesarios mil puntos de experiencia, pero para ir del 10 al 11 son necesarias 10 mil unidades. Para ir del 29 al 30 se requieren 350 mil puntos. 
+    
+  >Lo que hace más difícil esto es que se requieren más puntos de experiencia, pero no se aumenta la forma de ganarlos, por lo que es muy complicado subir de nivel, afirman los jugadores. 
+
+
+
+## Propuesta
+
+1.- Aumentar la experiencia de la realidad aumentada promoviendo la convivencia, mediante la adopción de un pokemon.
+           
+           Fundamento 
+
+La película Detective Pikachu ha sido la película que más recaudación ha conseguido a nivel mundial, adelantando así a _Avengers: Endgame.
+
+Generando así el deseo y la euforia de convivir con un pokemon, situación que se puede aprovechar para mejorar la convivencia mediante la tegnologia de realidad aumentada para poder cuidar alimentar y convivir con un pokemon.
+
+
+2.- -Generar Batallas y Misiones promoviendo el uso de tokens go. (Una criptomoneda).
+
+          Fundamento
+        
+Los activos en el juego basados ​​en token ofrecen nuevas oportunidades para la creación de valor, mientras que reducir los costos de transacción ofrece márgenes más altos.
+
+Las transacciones con las criptomonedas son instantáneas.
+
+Facilita las transacciones internacionales.
+
+"El mercado de transacciones de criptomonedas todos los dias crece, se expande y más gente invierte en ello. Están creadas para cambiar la forma de consumo de la gente"
+
+Nuestra interfaz
+
+La Biblioteca virtual de pokemones nos permitirá tener la información necesaria para que los usuarios conozcan mas a detalle caracteristicas de cada pokemon, podran filtrar y obtener datos importantes, conoceran el promedio de vida de cada pokemon.
+
+
+> Permitira tener la informacion necesaria para la interaccion con cada pokemon.
+
+
+
 # Data Lovers
 
 ## Índice
