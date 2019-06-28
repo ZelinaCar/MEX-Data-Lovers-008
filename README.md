@@ -64,13 +64,15 @@ Se podria visualizar en cualquier dispositivo movil
 
 La Biblioteca virtual de pokemones nos permitirá tener la información necesaria para que los usuarios conozcan mas a detalle caracteristicas de cada pokemon, podran filtrar y obtener datos importantes, conoceran el promedio de vida de cada pokemon.
 
-Nuestra primer prototipo 
 
-![enter image description here](https://subefotos.com/ver/?b9630a0964da56c3907e07359f9aa623o.jpg)
+Nuestro primer prototipo 
+
+
+![](https://fotos.subefotos.com/b9630a0964da56c3907e07359f9aa623o.jpg)
 
 Obteniendo como retroalimentacion un diseño mas sencillo enfocado en las funciones principales de la interfaz, mostrar, filtrar y ordenar.
 
-![enter image description here](https://fotos.subefotos.com/992c9bb48df5a035a8353f1f44a54dd9o.jpg)
+![](https://fotos.subefotos.com/992c9bb48df5a035a8353f1f44a54dd9o.jpg)
 
 
 
