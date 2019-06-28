@@ -24,15 +24,15 @@ Los jugadores de mayor nivel tampoco reciben una recompensa adecuada que justifi
 
 El problema de Pokémon Go es que un entrenador de nivel 1 necesita capturar diez criaturas para subir de nivel, mientras que un jugador superior, de nivel 39, requiere de más de 20.000.
 
+No se logro la fidelizacion de los primeros jugadores.
+
 ## Testimonios
 
-	> El juego no premia con más puntos si se cazan a pokémones más evolucionados en los niveles más altos, algo que consideran desalentador para el jugador.
+El juego no premia con más puntos si se cazan a pokémones más evolucionados en los niveles más altos, algo que consideran desalentador para el jugador.
 
-    > Para subir del nivel 1 al 2 son necesarios mil puntos de experiencia, pero para ir del 10 al 11 son necesarias 10 mil unidades. Para ir del 29 al 30 se requieren 350 mil puntos. 
+Para subir del nivel 1 al 2 son necesarios mil puntos de experiencia, pero para ir del 10 al 11 son necesarias 10 mil unidades. Para ir del 29 al 30 se requieren 350 mil puntos. 
     
-  >Lo que hace más difícil esto es que se requieren más puntos de experiencia, pero no se aumenta la forma de ganarlos, por lo que es muy complicado subir de nivel, afirman los jugadores. 
-
-
+Lo que hace más difícil esto es que se requieren más puntos de experiencia, pero no se aumenta la forma de ganarlos, por lo que es muy complicado subir de nivel, afirman los jugadores. 
 
 ## Propuesta
 
@@ -59,10 +59,18 @@ Facilita las transacciones internacionales.
 
 Nuestra interfaz
 
+Esta desarrollada, con JS, HTML 5 y CSS
+Se podria visualizar en cualquier dispositivo movil
+
 La Biblioteca virtual de pokemones nos permitirá tener la información necesaria para que los usuarios conozcan mas a detalle caracteristicas de cada pokemon, podran filtrar y obtener datos importantes, conoceran el promedio de vida de cada pokemon.
 
+Nuestra primer prototipo 
 
-> Permitira tener la informacion necesaria para la interaccion con cada pokemon.
+![enter image description here](https://subefotos.com/ver/?b9630a0964da56c3907e07359f9aa623o.jpg)
+
+Obteniendo como retroalimentacion un diseño mas sencillo enfocado en las funciones principales de la interfaz, mostrar, filtrar y ordenar.
+
+![enter image description here](https://fotos.subefotos.com/992c9bb48df5a035a8353f1f44a54dd9o.jpg)
 
 
 
