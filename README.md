@@ -1,6 +1,6 @@
 # POKEMON GO
 
-Es un vídeojuego de realidad aumentada basado en la localización desarrollado por Niantic, Inc.1​2​ para dispositivos iOS y Android. Es un videojuego gratuito pero contiene microtransacciones. El juego consiste en buscar y capturar personajes de la saga Pokemón escondidos en ubicaciones del mundo real y luchar con ellos, lo que implica desplazarse físicamente por las calles de la ciudad para progresar. 
+Es un vídeojuego de realidad aumentada basado en la localización desarrollado por Niantic, Inc.1​2​ para dispositivos iOS y Android. Es un videojuego gratuito pero contiene microtransacciones. El juego consiste en buscar y capturar personajes de la saga Pokemón escondidos en ubicaciones del mundo real y luchar con ellos, lo que implica desplazarse físicamente por las calles de la ciudad para progresar.
 
 La aplicación comporta un elemento de interacción social, ya que promueve reuniones físicas de los usuarios en distintas ubicaciones de sus poblaciones.
 
@@ -30,15 +30,15 @@ No se logro la fidelizacion de los primeros jugadores.
 
 El juego no premia con más puntos si se cazan a pokémones más evolucionados en los niveles más altos, algo que consideran desalentador para el jugador.
 
-Para subir del nivel 1 al 2 son necesarios mil puntos de experiencia, pero para ir del 10 al 11 son necesarias 10 mil unidades. Para ir del 29 al 30 se requieren 350 mil puntos. 
-    
-Lo que hace más difícil esto es que se requieren más puntos de experiencia, pero no se aumenta la forma de ganarlos, por lo que es muy complicado subir de nivel, afirman los jugadores. 
+Para subir del nivel 1 al 2 son necesarios mil puntos de experiencia, pero para ir del 10 al 11 son necesarias 10 mil unidades. Para ir del 29 al 30 se requieren 350 mil puntos.
+
+Lo que hace más difícil esto es que se requieren más puntos de experiencia, pero no se aumenta la forma de ganarlos, por lo que es muy complicado subir de nivel, afirman los jugadores.
 
 ## Propuesta
 
 1.- Aumentar la experiencia de la realidad aumentada promoviendo la convivencia, mediante la adopción de un pokemon.
-           
-           Fundamento 
+
+           Fundamento
 
 La película Detective Pikachu ha sido la película que más recaudación ha conseguido a nivel mundial, adelantando así a _Avengers: Endgame.
 
@@ -48,7 +48,7 @@ Generando así el deseo y la euforia de convivir con un pokemon, situación que 
 2.- -Generar Batallas y Misiones promoviendo el uso de tokens go. (Una criptomoneda).
 
           Fundamento
-        
+
 Los activos en el juego basados ​​en token ofrecen nuevas oportunidades para la creación de valor, mientras que reducir los costos de transacción ofrece márgenes más altos.
 
 Las transacciones con las criptomonedas son instantáneas.
@@ -65,7 +65,7 @@ Se podria visualizar en cualquier dispositivo movil
 La Biblioteca virtual de pokemones nos permitirá tener la información necesaria para que los usuarios conozcan mas a detalle caracteristicas de cada pokemon, podran filtrar y obtener datos importantes, conoceran el promedio de vida de cada pokemon.
 
 
-Nuestro primer prototipo 
+Nuestro primer prototipo
 
 
 ![](https://fotos.subefotos.com/b9630a0964da56c3907e07359f9aa623o.jpg)
@@ -73,6 +73,8 @@ Nuestro primer prototipo
 Obteniendo como retroalimentacion un diseño mas sencillo enfocado en las funciones principales de la interfaz, mostrar, filtrar y ordenar.
 
 ![](https://fotos.subefotos.com/992c9bb48df5a035a8353f1f44a54dd9o.jpg)
+
+
 
 # Data Lovers
 
@@ -139,7 +141,7 @@ Estos son datos que te proponemos:
   este [link](https://developer.riotgames.com/api-methods/).
 - [Rick and Morty](src/data/rickandmorty/rickandmorty.json).
   Este set nos proporciona la lista de los personajes de la serie Rick and
-  Morty. Puedes revisar la documentación de su API en este [link](https://rickandmortyapi.com). 
+  Morty. Puedes revisar la documentación de su API en este [link](https://rickandmortyapi.com).
 
 
 Como entregable final tendrás una página web que permita **visualizar la data,

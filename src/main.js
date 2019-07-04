@@ -71,6 +71,7 @@ document.addEventListener("DOMContentLoaded", showList);
 // let inputNombre = document.getElementById('nombre-pokemon');
 // let imprimirBusqueda = document.getElementById('busqueda-nombre');
 
+
 let buscarNombre = () => {
   let texto = inputNombre.value.toLowerCase();
   console.log(texto);
@@ -89,7 +90,9 @@ let buscarNombre = () => {
 
 
 
+
 // const cifrar = () => {
+
 //   let cadena = document.getElementById('tarea').value;              //cadena a cifrar 
 //   let offset = parseInt(document.getElementById('offset').value);
 //   cadena = cadena.toUpperCase();
@@ -102,4 +105,5 @@ let buscarNombre = () => {
 
 // document.addEventListener("DOMContentLoaded", function(event) {
 //   console.log("DOM fully loaded and parsed");
+
 // });

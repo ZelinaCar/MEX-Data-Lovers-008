@@ -4,19 +4,71 @@
     <meta charset="utf-8">
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
-    <!-- responsive: -->
+    
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
+    <link rel="icon" type="imagen.png" href="https://i.ibb.co/X3kxv16/favicon-1.png">
+    <link href="https://fonts.googleapis.com/css?family=Prata&display=swap" rel="stylesheet">
   </head>
-  <body> 
-      <script src="./data/pokemon/pokemon.js"></script>
-      <header><h3>Biblioteca virtual de Pokemones</h3></header>
-      <div class = "contenedor-botones">
-        <a href = "" id="btn-catalogo" >Catálogo</a>
-        <a href = "" id="btn-busqueda" >Búsqueda</a>
-        <a href = "" id="btn-stats" >Estadísticas</a>
-        <a href = "" id="btn-adopta" >Adopta!</a>
-      </div>
-      <section id = "seccion-inicio">  
+
+  <body>
+    <div id = "root"></div>
+    <!-- <script src="./data/injuries/injuries.js"></script> -->
+    <script src="./data/pokemon/pokemon.js"></script>
+    <!-- <script src="./data/steam/steam.js"></script> -->
+    <!-- <script src="./data/worldbank/worldbank.js"></script> -->
+    <!-- <script src="./data/lol/lol.js"></script> -->
+
+<!--LOGO-->
+    <section class="superior" ><img id="logo" src="https://fotos.subefotos.com/6677229426e172edd235da8820f98b21o.png" alt="Logo Pokemon"></section>
+
+    <!--MENU-->
+
+<nav>
+<ul>
+  <li><a href="index.html">INICIO</a></li>
+  <li><a href="#primero">CONOCE</a></li>
+  <li><a href="#segundo">BUSQUEDA</a></li>
+  <li><a href="#tercero">ESTADISTICAS</a></li>
+
+</ul>
+</nav>
+
+<!--VIDEO POKEMON GO-->
+
+<section class="cabecera" style="text-align: center;"><iframe width="760" height="395" src="https://www.youtube.com/embed/HdkWhoBs8BE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></section>
+
+<!--SECCION ELEGIR A TU POKEMON-->
+
+<h1 id="primero">ELIGE A TU POKEMON</h1>
+
+    <div id = "caja" class = "box">
+      <!-- <p class = "titulo">Selecciona un Pókemon para mostrarte su info: </p>
+        <p><label for = "lista-nombres">
+            <select id = "lista-nombres" autofocus>
+              <option value = "0" selected>Selecciona 1...</option>
+            </select>
+           </label>
+        </p> -->
+
+      <!--p><label class = "titulo" for = "Resultado">Poke ~ ficha:</label></p-->
+      <div id = "lista-nombres"  class = "caja-texto"></div>
+
+    </div>
+    <script src="data.js"></script>
+    <script src="main.js"></script>
+
+    <h2 id="segundo">FILTRA POKEMON</h2>
+
+    <!--Busqueda POKEMON-->
+
+      <section id="busqueda">
+          <label for="nombre">Nombre Pokemon:</label>
+          <input type="text" name="nombre" id="nombre-pokemon">
+          <button id="buscar">Busqueda</button>
+
+      </section>
+
+      <section id = "seccion-inicio">
             Bienvenidxs!
       </section>
       <section id = "seccion-lista">
@@ -25,40 +77,23 @@
             <div id = "lista-nombres" class = "caja-lista"></div>
           </label>
       </section>
-      <!-- <section id = "seccion-ficha">
+      <section id = "seccion-ficha">
         mostrar poke ficha
-      </section> -->
+      </section>
       <section id = "seccion-busqueda">
-        Selecciona:
-        <form>
-          <!-- busqueda por nombre -->
-            <div> 
-              <input type = "text" class = "txt-name" id ="btn-name" />
-              <button id = "btn-go-name">Go!</button>
-            </div>
-            <div id = "result-busq-name">
-
-            </div>
-            <!-- buscar por tipo -->
-            <div>
-              <select name = "select-type">
-                <option value = "0" selected>Selecciona...</option> 
-              </select>
-              <button id = "btn-go-tipo">Go!</button> 
-            </div>
-            <div id = "result-busq-type">
-
-            </div>
-        </form>
+          boton buscar por nombre
+          boton buscar por tipo
       </section>
       <section id = "seccion-stats">
           boton estadisticas
       </section>
-      <!-- <section id = "seccion-adopta">
+      <section id = "seccion-adopta">
           info Adopta
-      </section> -->
-      <footer>DR.</footer>
-    <script src="data.js"></script>
-    <script src="main.js"></script>
+      </section>
+
+
+      <br>
+      <br>
+      <br>
  </body>
 </html>

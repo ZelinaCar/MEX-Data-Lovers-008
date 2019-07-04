@@ -1,61 +1,125 @@
-/* Selectores por Etiquetas, menor especificidad: 001  */
+body
+{
+  border: 1px white solid;
+	width:1000px;
+	margin-left:auto;
+	margin-right:auto;
+	padding:0px;
+  font-family: sans-serif;
+}
 
-* { 
+h1, h2
+{
   text-align: center;
-  align-items: center; }
-
-body {
-    font-family: "Helvetica", sans-serif;
-    color: #FF6B25;
-    background-color: #f3f9fb;
-    background-image: url("images/pokemon-badge.png");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-attachment: fixed;
-    text-align: center;
-  }
-
-/* Tamaño de la letra en media por debajo de 700px */
-@media screen and (min-width:768px) {
-  .poke-num, .poke-name { font-size: 12px; }
-  }
-/* Por debajo de 400px */
-@media screen and (max-width:768px) {
-  .poke-num, .poke-name { font-size: 10px; }
-      }
-      
-.contenedor-botones {
-  background-color: #1650B4;
-  width: 40%;
-  /* height: 20%; */
 }
 
-a:link, a:visited {
-  background-color: #1650B4;
-  color: white;
-  padding: 4%;
-  text-decoration: none;
+nav
+{
+}
+
+ul
+{
+list-style: none;
+padding: 0;
+margin: 0;
+background: #85C1E9;
+line-height: 40px;
+text-align: center;
+}
+
+li
+  {
+  width: 150px;
   display: inline-block;
-}
-
-a:hover, a:active {
-  background-color: #FF6B25;
-}
-
-p { 
-    color: #1650B4;  
-}
-
-header {
-    background-color: #1650B4;
-    width: 40%;
-    height: 20%;
-    /* border-radius: 10px; */
-    padding: 5px;
-    color: #f3f9fb;
+  text-align: center;
   }
 
-/* selectores por Clases, mediana especificidad: 010  */
+a
+{
+  text-decoration: none;
+  color: #fff;
+  display: block;
+}
+
+a:hover {
+  background: #82E0AA;
+  color:#E74C3C;
+}
+
+
+
+.cuerpo{
+    max-width: 1000px;
+    margin:auto;
+
+     }
+
+.cabecera{
+  background-color: #D6EAF8;
+   margin-top:2px;
+   height: 400px;
+     }
+
+#Logo{
+     display:block;
+     margin:auto;
+}
+
+
+.superior{
+    background: white;
+    margin-top: 0px;
+    height: 155px;
+    text-align: center;
+     }
+
+
+#caja
+{
+text-align: center;
+background-image: url(https://fotos.subefotos.com/225ae972ac9b4dd22652cc5e2661bb33o.png);
+margin: 1rem;
+padding: 1rem;
+height: 455px;
+}
+
+
+#lista-nombres
+
+{
+  justify-content: center;
+  text-align: center;
+  margin: 1rem;
+  padding: 1rem;
+  overflow: auto;
+  background: ##E7F9FF;
+    width: 50%;
+    height: 350px;
+}
+
+
+#busqueda
+
+  {
+  text-align: center;
+  margin: 1rem;
+  padding: 1rem;
+  height: 455px;
+}
+
+.box
+{
+  align-content: center;
+
+}
+#lista-nombres
+{
+  align-content: center;
+
+}
+
+/*CODIGO DE CSS ZELYNA*/
+
 .titulo { font-weight: bold; }
 
 .caja-lista {
@@ -76,7 +140,7 @@ header {
   color: #1650B4;
   background-color: #f3f9fb;
   width: 100px;
-  height: 100px;  
+  height: 100px;
   border-radius: 5px;
   padding: 5px;
   box-shadow: 2px 2px 7px 1px #1C6EA4;
@@ -100,35 +164,3 @@ header {
 .poke-name{
   margin: 5%;
 }
-
-.txt-name {          
-  width: 10%;
-  border-radius: 5px;
-  /* background-color: #226597; */
-  border: none;
-  color: #226597;
-  padding: 1%;
-}
-
-
-
-footer {
-  width: 40%;
-  height: 60px;
-}
-
-/* .select {
-  position: relative;
-  border: 1px solid #ccc;
-  width: 120px;
-  overflow: hidden;
-  background-color: #fff;
-} */
-
-/* select:focus{ outline: #C4D6BC; } */
-
-
-/* #lista{
-  
-} */
-/* Selectores por ID,   Mayor especificidad: 100 */
