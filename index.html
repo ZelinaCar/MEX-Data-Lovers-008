@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Data Lovers</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- responsive: -->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
+  </head>
+  <body> 
+      <script src="./data/pokemon/pokemon.js"></script>
+      <header><h3>Biblioteca virtual de Pokemones</h3></header>
+      <div class = "contenedor-botones">
+        <a href = "" id="btn-catalogo" >Catálogo</a>
+        <a href = "" id="btn-busqueda" >Búsqueda</a>
+        <a href = "" id="btn-stats" >Estadísticas</a>
+        <a href = "" id="btn-adopta" >Adopta!</a>
+      </div>
+      <section id = "seccion-inicio">  
+            Bienvenidxs!
+      </section>
+      <!-- <section id = "seccion-lista">
+          <label for = "lista-nombres">
+            Pokemones de la A - Z
+            <div id = "lista-nombres" class = "caja-lista"></div>
+          </label>
+      </section> -->
+      <!-- <section id = "seccion-ficha">
+        mostrar poke ficha
+      </section> -->
+      <section id = "seccion-busqueda">
+        Selecciona:
+        <form>
+          <!-- busqueda por nombre -->
+            <div> 
+              <input type = "text" class = "txt-name" id ="btn-name" />
+              <button id = "btn-go-name">Go!</button>
+            </div>
+            <div id = "result-busq-name">
+
+            </div>
+            <!-- buscar por tipo -->
+            <div>
+              <select name = "select-tipo">
+                <option value = "0" selected>Selecciona...</option> 
+              </select>
+              <button id = "btn-go-tipo">Go!</button> 
+            </div>
+            <div id = "result-busq-type">
+
+            </div>
+        </form>
+      </section>
+      <section id = "seccion-stats">
+          boton estadisticas
+      </section>
+      <!-- <section id = "seccion-adopta">
+          info Adopta
+      </section> -->
+      <footer>DR.</footer>
+    <script src="data.js"></script>
+    <script src="main.js"></script>
+ </body>
+</html>
