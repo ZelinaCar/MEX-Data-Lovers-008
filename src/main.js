@@ -15,12 +15,10 @@
 // btnCatalogo.addEventListener('click', showCatalog);
 // // logo.addEventListener('click', returnToIndex);
 
-
-
 const showList = () => {
   // ordena los pokemones por nombre de A a Z
-  a = POKEMON.pokemon.sort(function (a, b){
-    if ( a.name < b.name ) {  return -1; }
+  a = POKEMON.pokemon.sort(function (a, b){ 
+    if ( a.name < b.name ) {  return -1; }  
     if ( a.name > b.name ) {  return 1;  }
     return 0;
   });
@@ -35,8 +33,31 @@ const showList = () => {
                     <p class = "poke-name">${a[i].name}</p>
                 </div>`
       document.getElementById("lista-nombres").innerHTML = lista;
-    }
+    } 
 };
+// llena el select para busqueda por tipo
+      // for (i in a)  {
+      //   var idSelect = document.getElementById("select-type");
+      //   var addOption = document.createElement("option");
+      //   idSelect.options.add(addOption, i);
+      //   addOption.text = a[i].num + " - " + a[i].name;  
+      // }
+
+
+// busqueda por tipo
+const busqTipo = () => {
+
+
+
+
+}
+      // for (i in a)  {
+      //   var idSelect = document.getElementById("lista-nombres");
+      //   var addOption = document.createElement("option");
+      //   idSelect.options.add(addOption, i);
+      //   addOption.text = a[i].num + " - " + a[i].name;  
+      // }
+
 
 document.addEventListener("DOMContentLoaded", showList);
 
@@ -50,28 +71,29 @@ document.addEventListener("DOMContentLoaded", showList);
 // let inputNombre = document.getElementById('nombre-pokemon');
 // let imprimirBusqueda = document.getElementById('busqueda-nombre');
 
-// let buscarNombre = () => {
 
-//   let texto= inputNombre.value.toLowerCase();
-//   console.log(texto);
-//   for(let pokemon of POKEMON.pokemon){
-//         let nombre = pokemon.name.toLowerCase();
-//         if(nombre.indexOf(texto) !== -1){
-//             imprimirBusqueda.innerHTML = `<li>
-//             <img src="${pokemon.img}">
-//             <p><strong>Numero:</strong>${pokemon.num}</p>
-//             <p><strong>Nombre:</strong> ${pokemon.name}</p>
-//             </li>`;
-//         }
-//     }
-//         //console.log(Nombre);
+let buscarNombre = () => {
+  let texto = inputNombre.value.toLowerCase();
+  console.log(texto);
+  for(let pokemon of POKEMON.pokemon){
+        let nombre = pokemon.name.toLowerCase();
+        if(nombre.indexOf(texto) !== -1){
+            imprimirBusqueda.innerHTML = `<li>
+            <img src="${pokemon.img}">
+            <p><strong>Numero:</strong>${pokemon.num}</p>
+            <p><strong>Nombre:</strong> ${pokemon.name}</p>
+            </li>`;
+        }
+    }
+        //console.log(Nombre);
+};
 
-// };
 
 
 
 // const cifrar = () => {
-//   let cadena = document.getElementById('tarea').value;              //cadena a cifrar
+
+//   let cadena = document.getElementById('tarea').value;              //cadena a cifrar 
 //   let offset = parseInt(document.getElementById('offset').value);
 //   cadena = cadena.toUpperCase();
 //   let nuevaCadena = cipher.encode(offset, cadena);
@@ -83,10 +105,5 @@ document.addEventListener("DOMContentLoaded", showList);
 
 // document.addEventListener("DOMContentLoaded", function(event) {
 //   console.log("DOM fully loaded and parsed");
+
 // });
-      // for (i in a)  {
-      //   var idSelect = document.getElementById("lista-nombres");
-      //   var addOption = document.createElement("option");
-      //   idSelect.options.add(addOption, i);
-      //   addOption.text = a[i].num + " - " + a[i].name;
-      // }
