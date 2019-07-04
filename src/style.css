@@ -1,0 +1,134 @@
+/* Selectores por Etiquetas, menor especificidad: 001  */
+
+* { 
+  text-align: center;
+  align-items: center; }
+
+body {
+    font-family: "Helvetica", sans-serif;
+    color: #FF6B25;
+    background-color: #f3f9fb;
+    background-image: url("images/pokemon-badge.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+    text-align: center;
+  }
+
+/* Tamaño de la letra en media por debajo de 700px */
+@media screen and (min-width:768px) {
+  .poke-num, .poke-name { font-size: 12px; }
+  }
+/* Por debajo de 400px */
+@media screen and (max-width:768px) {
+  .poke-num, .poke-name { font-size: 10px; }
+      }
+      
+.contenedor-botones {
+  background-color: #1650B4;
+  width: 40%;
+  /* height: 20%; */
+}
+
+a:link, a:visited {
+  background-color: #1650B4;
+  color: white;
+  padding: 4%;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: #FF6B25;
+}
+
+p { 
+    color: #1650B4;  
+}
+
+header {
+    background-color: #1650B4;
+    width: 40%;
+    height: 20%;
+    /* border-radius: 10px; */
+    padding: 5px;
+    color: #f3f9fb;
+  }
+
+/* selectores por Clases, mediana especificidad: 010  */
+.titulo { font-weight: bold; }
+
+.caja-lista {
+  background-color: #f3f9fb;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 40%;
+  height: 500px;
+  overflow: auto;
+  justify-content: center;
+  padding: 1%
+}
+
+.caja-item {
+  margin: 10px;
+  color: #1650B4;
+  background-color: #f3f9fb;
+  width: 100px;
+  height: 100px;  
+  border-radius: 5px;
+  padding: 5px;
+  box-shadow: 2px 2px 7px 1px #1C6EA4;
+}
+
+.caja-item:hover{
+  box-shadow: 2px 2px 7px 1px #FF6B25;
+}
+
+.poke-img{
+  padding: 0%;
+  text-align: center;
+  margin: 1%
+  /* width: 25%;
+  height: 25%;   */
+}
+
+.poke-num{
+  margin: 1%;
+}
+.poke-name{
+  margin: 5%;
+}
+
+.txt-name {          
+  width: 10%;
+  border-radius: 5px;
+  /* background-color: #226597; */
+  border: none;
+  color: #226597;
+  padding: 1%;
+}
+
+
+
+footer {
+  width: 40%;
+  height: 60px;
+}
+
+/* .select {
+  position: relative;
+  border: 1px solid #ccc;
+  width: 120px;
+  overflow: hidden;
+  background-color: #fff;
+} */
+
+/* select:focus{ outline: #C4D6BC; } */
+
+
+/* #lista{
+  
+} */
+/* Selectores por ID,   Mayor especificidad: 100 */
