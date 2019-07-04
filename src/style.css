@@ -1,3 +1,4 @@
+
 body
 {
   border: 1px white solid;
@@ -76,9 +77,11 @@ a:hover {
 
 #caja
 {
-  justify-content: center;
+text-align: center;
 background-image: url(https://fotos.subefotos.com/225ae972ac9b4dd22652cc5e2661bb33o.png);
-
+margin: 1rem;
+padding: 1rem;
+height: 455px;
 }
 
 
@@ -90,12 +93,9 @@ background-image: url(https://fotos.subefotos.com/225ae972ac9b4dd22652cc5e2661bb
   margin: 1rem;
   padding: 1rem;
   overflow: auto;
-  background: #E7F9FF;
-    width: 100%;
+  background: ##E7F9FF;
+    width: 50%;
     height: 350px;
-    flex-direction: row;
-    flex-wrap: wrap;
-
 }
 
 
