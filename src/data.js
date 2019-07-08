@@ -1,38 +1,43 @@
-/* esta es una función de ejemplo
+// esta es una función de ejemplo
 // puedes ver como agregamos la función a nuestro objeto global window
-const example = () => {
-  return 'example';
-};
-window.example = example;
-*/
-const example = () => {
-  return 'example';
-};
-window.example = example;
-
-
-
-
-
-// window.cipher = {
-// encode: (offset, string) => {
-//   let nuevaCadena = "";
-//   // let nuevaCadena =  [];
-//   for (let i = 0; i < string.length; i++) {
-//     let positionAscii = string.charCodeAt(i);
-//     if (positionAscii === 32) { // si se trata de un espacio vacío, lo concatena tal cual
-//           nuevaCadena = nuevaCadena + ' ';
-//     } 
-//     else {
-//       let newPositionAscii = ((positionAscii - 65 + offset) % 26 + 65);
-//       let newCharacter = String.fromCharCode(newPositionAscii);
-//       nuevaCadena = nuevaCadena.concat(newCharacter);   
-//     }
-//     // nuevaCadena.push(newCharacter); //devuelve el array separado por comas
-//   }
-// return nuevaCadena;
+// const example = () => {
+//   return 'example';
 // };
+ // FUNCION QUE ORDENA 
+ let ordenar = (data,propiedad,orden) => {
+  let resultado = {};
+  if(orden === "ascendente") {
+  resultado = data.sort((a,b) => (a[propiedad] > b[propiedad] ? 1 : -1));
+  } 
+  else if(orden === "descendente") {
+  resultado = data.sort ((a,b) => (a[propiedad] > b[propiedad] ? -1 : 1));
+  }
+  else if(orden === "numAscendente"){
+  resultado = data.sort((a,b) => (a[propiedad] > b[propiedad] ? 1 : -1));
+  }
+  else if (orden === "numDescendente"){
+  resultado = data.sort((a,b) => (a[propiedad] > b[propiedad] ? -1 : 1));
+  }
+  return resultado;
+
+}
+
+let filtrar = (data,condicion) => {
+  let filtro = data.filter(pokemon => {
+    for( let i = 0; i < pokemon.type.length; i++){
+      if (pokemon.type[i] === condicion){
+        return true;
+      }
+    }
+    return false;
+  });
+  return filtro;
+}
+  
+
+window.ordenar= ordenar;
+window.filtrar = filtrar;
 
 
 
-// leo el id desde main.js y lo devuelvo con mas info 
+// window.example = example;

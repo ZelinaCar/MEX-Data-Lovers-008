@@ -1,30 +1,31 @@
-body
-{
-  border: 1px white solid;
-	width:1000px;
-	margin-left:auto;
-	margin-right:auto;
-	padding:0px;
-  font-family: sans-serif;
-}
 
-h1, h2
-{
+/* Estilo para todos los elementos  */
+* { 
   text-align: center;
+  margin: 0%;
+  border: 0%;
+  padding: 0%;
 }
-
-nav
-{
+body {
+  font-family: "Helvetica", sans-serif;
+  color: #1E427A;
+  font-size: 14 px;
 }
-
-ul
-{
-list-style: none;
-padding: 0;
-margin: 0;
-background: #85C1E9;
-line-height: 40px;
-text-align: center;
+.seccion {
+  width: 100%;
+  height: 20%;
+  margin: auto;
+}
+.logo{
+  height: 15%;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background: #85C1E9;
+  line-height: 40px;
+  text-align: center;
 }
 
 li
@@ -43,98 +44,44 @@ a
 
 a:hover {
   background: #82E0AA;
-  color:#E74C3C;
+  color:#1E427A;
 }
 
 
-
-.cuerpo{
-    max-width: 1000px;
-    margin:auto;
-
-     }
-
-.cabecera{
-  background-color: #D6EAF8;
-   margin-top:2px;
-   height: 400px;
-     }
-
-#Logo{
-     display:block;
-     margin:auto;
+*  NAVEGADOR  */
+.boton {
+  background-color: #85C1E9;
+  height: 40px;
 }
-
-
-.superior{
-    background: white;
-    margin-top: 0px;
-    height: 155px;
-    text-align: center;
-     }
-
-
-#caja
-{
-text-align: center;
-background-image: url(https://fotos.subefotos.com/225ae972ac9b4dd22652cc5e2661bb33o.png);
-margin: 1rem;
-padding: 1rem;
-height: 455px;
+.boton a {
+  display: inline-block; 
+  width: 24%; 
+  height: 40px;
+  text-decoration: none;
+  background-color: #85C1E9;
+  color: #fff;
+  font-weight: bold;
 }
-
-
-#lista-nombres
-
-{
-  justify-content: center;
-  text-align: center;
-  margin: 1rem;
-  padding: 1rem;
-  overflow: auto;
-  background: ##E7F9FF;
-    width: 50%;
-    height: 350px;
+.boton a:hover {
+  background-color: #d4fde6;
+  color:#356ABD;
+}  
+/* fin del navegador */
+/* SECTION 1, lista de pokemones Y CAJAS CONTENEDORAS DE LOS POKEMONES */
+#seccion-lista {
+  background-color: #d4fde6; 
 }
-
-
-#busqueda
-
-  {
-  text-align: center;
-  margin: 1rem;
-  padding: 1rem;
-  height: 455px;
-}
-
-.box
-{
-  align-content: center;
-
-}
-#lista-nombres
-{
-  align-content: center;
-
-}
-
-/*CODIGO DE CSS ZELYNA*/
-
-.titulo { font-weight: bold; }
-
 .caja-lista {
-  background-color: #f3f9fb;
-  border-radius: 5px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 40%;
-  height: 500px;
+  width: 70%;
+  height: 350px;
   overflow: auto;
   justify-content: center;
-  padding: 1%
+  padding: 1%;
+  margin: auto;
 }
-
 .caja-item {
   margin: 10px;
   color: #1650B4;
@@ -145,22 +92,63 @@ height: 455px;
   padding: 5px;
   box-shadow: 2px 2px 7px 1px #1C6EA4;
 }
-
+#caja-item-big {
+  width: 30%;
+  height: 50%;
+  margin: auto;
+  box-shadow: 2px 2px 7px 1px #1C6EA4;
+}
 .caja-item:hover{
-  box-shadow: 2px 2px 7px 1px #FF6B25;
+  box-shadow: 2px 2px 7px 1px #FFA000;
+}
+/* estilo para el select */
+.select {
+  border-style: none;
+  border-radius: 5px;
+  width: 120px;
+  height: 40px;
+  background-color: #d4fde6;
+  margin-bottom: 15px;
 }
 
-.poke-img{
-  padding: 0%;
-  text-align: center;
-  margin: 1%
-  /* width: 25%;
-  height: 25%;   */
+/* INPUT TEXT */
+.caja-texto {
+  background-color: #d4fde6;
+  width: 16%;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  margin: 15px;
 }
 
-.poke-num{
-  margin: 1%;
+/* BOTONES */
+.button {          
+  width: 4%;
+  height: 40px;
+  border-radius: 5px;
+  background-color: #1E427A;
+  border: none;
+  color: #f3f9fb;
+  font-size: 14px;
 }
-.poke-name{
-  margin: 5%;
+/* .button-type {          
+  width: 125px;
+  border-radius: 5px;
+  background-color: #1E427A;
+  border: none;
+  color: #f3f9fb;
+  height: 40px;
+  font-size: 16px;
+} */
+/* .button-type:focus, .button-type:hover */
+.button:hover, .button:focus
+{
+  background-color: #FFA000;
+  color: #1E427A;
+  font-weight: bold;
 }
+
+/* footer {
+  height: 60px;
+} */

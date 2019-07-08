@@ -4,96 +4,73 @@
     <meta charset="utf-8">
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
-    
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
-    <link rel="icon" type="imagen.png" href="https://i.ibb.co/X3kxv16/favicon-1.png">
     <link href="https://fonts.googleapis.com/css?family=Prata&display=swap" rel="stylesheet">
   </head>
 
   <body>
-    <div id = "root"></div>
-    <!-- <script src="./data/injuries/injuries.js"></script> -->
+    <div id = "root">
     <script src="./data/pokemon/pokemon.js"></script>
-    <!-- <script src="./data/steam/steam.js"></script> -->
-    <!-- <script src="./data/worldbank/worldbank.js"></script> -->
-    <!-- <script src="./data/lol/lol.js"></script> -->
-
-<!--LOGO-->
-    <section class="superior" ><img id="logo" src="https://fotos.subefotos.com/6677229426e172edd235da8820f98b21o.png" alt="Logo Pokemon"></section>
-
+    <!--LOGO-->
+    <figure class = "logo">
+      <img width="580px" height = "100px" src="https://fontmeme.com/permalink/190707/b0be9d80d889c9a54348361c1c8e7522.png" alt="logo-pokemon" />
+    </figure>
     <!--MENU-->
+    <nav>
+    <ul>
+      <li><a href="index.html">INICIO</a></li>
+      <li><a href="#primero">CONOCE</a></li>
+      <li><a href="#segundo">BUSQUEDA</a></li>
+      <li><a href="#tercero">ESTADISTICAS</a></li>
 
-<nav>
-<ul>
-  <li><a href="index.html">INICIO</a></li>
-  <li><a href="#primero">CONOCE</a></li>
-  <li><a href="#segundo">BUSQUEDA</a></li>
-  <li><a href="#tercero">ESTADISTICAS</a></li>
-
-</ul>
-</nav>
+    </ul>
+    </nav>
 
 <!--VIDEO POKEMON GO-->
 
-<section class="cabecera" style="text-align: center;"><iframe width="760" height="395" src="https://www.youtube.com/embed/HdkWhoBs8BE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></section>
+    <section class="cabecera" style="text-align: center;">
+      <iframe width="760" height="395" src="https://www.youtube.com/embed/HdkWhoBs8BE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+      </iframe>
+    </section>
 
-<!--SECCION ELEGIR A TU POKEMON-->
-
-<h1 id="primero">ELIGE A TU POKEMON</h1>
-
-    <div id = "caja" class = "box">
-      <!-- <p class = "titulo">Selecciona un Pókemon para mostrarte su info: </p>
-        <p><label for = "lista-nombres">
-            <select id = "lista-nombres" autofocus>
-              <option value = "0" selected>Selecciona 1...</option>
+      <!-- SECCION LISTA DE POKEMONES -->
+      <section id = "seccion-listado" class = "seccion">
+        <div id = "lista-pokes" class = "caja-lista"></div>
+        <!-- POKE FICHA -->
+      </section>
+      <!-- SECCION DE BUSQUEDA POR NOMBRE Y TIPO -->
+      <section id = "seccion-buscar" class = "seccion"> 
+          <form  method="get">
+            <label for = "txt-name">Nombre:</label>
+            <input id = "txt-name" type = "text" class = "caja-texto" placeholder="escribe el nombre..." required>
+            <!-- <button id = "btn-name" class = "button">go!</button> -->
+            <input id = "btn-name" class = "button" type="submit" value="Go!">
+          </form>
+          <form  method="get">
+            <label for = "select-tipo">ó selecciona un tipo:</label>
+            <select id = "select-tipo" class = "select">
+              <option value = "Water" selected>Water</option> 
+              <option value = "Fire" >Fire</option>
+              <option value = "Grass">Grass</option>              
+              <option value = "Ground">Ground</option>
+              <option value = "Rock">Rock</option>
+              <option value = "Steel">Steel</option>
             </select>
-           </label>
-        </p> -->
-
-      <!--p><label class = "titulo" for = "Resultado">Poke ~ ficha:</label></p-->
-      <div id = "lista-nombres"  class = "caja-texto"></div>
-
-    </div>
+            <input id = "btn-tipo" class = "button" type="submit" value="Go!">
+            <!-- <button id = "btn-type" class="button-type">AGUA</button> -->
+          </form>
+          <div id = "result-buscar"></div>
+      </section>
+      <!-- SECCION ESTADÍSTICAS -->
+      <section id = "seccion-estadisticas" class = "seccion">
+          <!-- estadísticas -->
+      </section>
+      <!-- SECCION ADOPTA -->
+      <section id = "seccion-adopta" class = "seccion">
+          <!-- proceso a seguir para adoptar, carta de adopcion -->
+      </section>
+      </div>
     <script src="data.js"></script>
     <script src="main.js"></script>
-
-    <h2 id="segundo">FILTRA POKEMON</h2>
-
-    <!--Busqueda POKEMON-->
-
-      <section id="busqueda">
-          <label for="nombre">Nombre Pokemon:</label>
-          <input type="text" name="nombre" id="nombre-pokemon">
-          <button id="buscar">Busqueda</button>
-
-      </section>
-
-      <section id = "seccion-inicio">
-            Bienvenidxs!
-      </section>
-      <section id = "seccion-lista">
-          <label for = "lista-nombres">
-            Pokemones de la A - Z
-            <div id = "lista-nombres" class = "caja-lista"></div>
-          </label>
-      </section>
-      <section id = "seccion-ficha">
-        mostrar poke ficha
-      </section>
-      <section id = "seccion-busqueda">
-          boton buscar por nombre
-          boton buscar por tipo
-      </section>
-      <section id = "seccion-stats">
-          boton estadisticas
-      </section>
-      <section id = "seccion-adopta">
-          info Adopta
-      </section>
-
-
-      <br>
-      <br>
-      <br>
  </body>
 </html>
