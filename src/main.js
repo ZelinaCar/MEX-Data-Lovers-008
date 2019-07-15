@@ -1,4 +1,19 @@
-let btnName = document.getElementById('btn-name'); // boton de busqueda por nombre de pokemon
+// funcion que muestra en pantalla
+// const muestra = (a, donde) => { 
+//   console.log(donde);
+//   let lista = "";
+//   a.forEach(e => {
+//     lista += `<div id = "${e.name}" class = "caja-item">
+//                     <figure>
+//                       <img src="${e.img}" alt="${e.name}" width="50" height="50" />
+//                     </figure>
+//                       <p>${e.num}</p>
+//                       <p>${e.name}</p>
+//                   </div>`
+//       });
+//   // donde.innerHTML = lista;
+// };
+let btnName = document.getElementById("btn-name"); // boton de busqueda por nombre de pokemon
 
 // FUNCION QUE BUSCA POR NOMBRE:
 let buscarNombre = () => {
@@ -24,7 +39,7 @@ let buscarNombre = () => {
   btnName.addEventListener('click', buscarNombre);
 
 // FUNCION QUE MUESTRA LA LISTA A - Z DE POKEMONES AL INICIO 
-const showList = () => {
+const listAZ = () => {
     // ordena los pokemones por nombre de A a Z
     a = POKEMON.pokemon.sort(function (a, b){ 
       if ( a.name < b.name ) {  return -1; }  
@@ -36,25 +51,33 @@ const showList = () => {
      for (i in a)  {
         lista += `<div class = "caja-item">
                     <figure>
-                      <img src="${a[i].img}" width="50" height="50" />
+                      <img src="${a[i].img}" alt = "${a[i].img}" width="50" height="50" />
                     </figure>
                       <p>${a[i].num}</p>
                       <p>${a[i].name}</p>
                   </div>`
         document.getElementById("lista-pokes").innerHTML = lista;
-      } 
-  };
-  document.addEventListener("DOMContentLoaded", showList);
+        }
+      event.preventDefault();
+    };
+  document.addEventListener("DOMContentLoaded", listAZ);
+  document.getElementById("btn-az").addEventListener("click", listAZ);
 
+      // //prueba poke-ficha
+      //   const cajaItem = document.getElementsByClassName("caja-item");
+      //   for (let i = 0; i < cajaItem.length; i++) {
+      //       cajaItem[i].addEventListener ("click", () => {
+      //           const idTarget = event.target.id;
+      //           console.log(idTarget);
+      //     })
+      //   }
+      // fin prueba
 
 // FUNCION QUE MUESTRA LA LISTA ORDENADA de la Z a la A:
   const showListZA = () => {
-    console.log("entrando a la funcion showListaZA");
-
-    // ordena los pokemones por nombre de A a Z
     a = POKEMON.pokemon.sort(function (a, b){ 
-      if ( a.name < b.name ) {  return -1; }  
-      if ( a.name > b.name ) {  return 1;  }
+      if ( a.name > b.name ) {  return -1; }  
+      if ( a.name < b.name ) {  return 1;  }
       return 0;
     });
     // muestra en pantalla la lista de pokemones
@@ -68,28 +91,31 @@ const showList = () => {
                       <p class = "poke-name">${a[i].name}</p>
                   </div>`
         document.getElementById("lista-pokes").innerHTML = lista;
-      } 
+      }
+    // event.preventDefault();
   };
-  // document.getElementById("listadoAZ").addEventListener("click", showListZA);
+  document.getElementById("btn-za").addEventListener("click", showListZA);
 
-
-
-
-
+  // busqueda por tipo
+  let pokemonList = document.getElementById("select-tipo");
+  const busqTipo = () => {
+    let lista = "";
+    let selectPokemon = pokemonList.options[pokemonList.selectedIndex].value;
+    const result = POKEMON.pokemon.filter(pokemon => pokemon.type[0] === selectPokemon);
+    result.forEach(a =>{
+        lista += `<div class = "caja-item">
+                    <figure>
+                      <img src="${a.img}" width="50" height="50" />
+                    </figure>
+                      <p>${a.num}</p>
+                      <p>${a.name}</p>
+                  </div>`
+        document.getElementById("result-buscar").innerHTML = lista;
+    });
+  };
+  pokemonList.addEventListener("change", busqTipo);
 
   // llena el select para busqueda por tipo
-        // for (i in a)  {
-        //   var idSelect = document.getElementById("select-type");
-        //   var addOption = document.createElement("option");
-        //   idSelect.options.add(addOption, i);
-        //   addOption.text = a[i].num + " - " + a[i].name;  
-        // }
-  
-  
-  // busqueda por tipo
-  const busqTipo = () => {
-  
-  }
         // for (i in a)  {
         //   var idSelect = document.getElementById("lista-nombres");
         //   var addOption = document.createElement("option");
@@ -97,94 +123,6 @@ const showList = () => {
         //   addOption.text = a[i].num + " - " + a[i].name;  
         // } 
   
-  // leer un nombre y pasarlo a data.js
-  //    en data.js leo el nombre y lo devuelvo con mas info aqui
-  // envio el resultado a index.html para mostrarlo
-  
-// //Función que Imprime la Data Ordenada
-// let ordenarPor = document.getElementById("ordenar");
-// let imprimirOrden = document.getElementById("lista-ordenada");
-// let pantallaPrintOrden = document.getElementById("pantalla-lista-ordenada");
-
-
-
-// const printordenar = () => {
-  
-//   let ordenarData = ordenarPor.value;
-//   let name= "";
-//   let str = "";
-//   if(ordenarData === "ascendente" || "descendente"){
-//     name = "name";
-//   }
-//   else {
-//     name = "num";
-//   }
-//   //Llama la funcion pura Ordenar
-//   const resultado = window.ordenar(data,name,ordenarData);
-//   //Imprime la data ordenada
-//   resultado.forEach(element => {
-//       str += `<li>
-//       <img src="${element.img}">
-//       <p><strong>Numero:</strong>${element.num}</p>
-//       <p><strong>Nombre:</strong> ${element.name}</p>
-//       </li> `;
-//   });
-//   imprimirOrden.innerHTML=str;
-//   pantallaPrintOrden.style.display = "block";
-//   mostrar.style.display = "none";
-
-// };
-// ordenarPor.addEventListener("change", printordenar);
-
-
-
-// //Funcion que oculta patalla buscar y muestra busqueda por tipos
-// //boton que se va a la lista de Tipos
-// let botonBuscarTipos=document.getElementById("tipo-pokemon");
-// let botonBuscarDebilidad=document.getElementById("debilidad-pokemon");
-// let pantallaTipos=document.getElementById("pantalla-iconos-tipos");
-// let pantallaBuscar = document.getElementById("pantalla-buscar");
-// //let pantallaPrincipal = document.getElementById("pantalla-principal");
-
-// const tipos = () =>{
-//   pantallaTipos.style.display="block";
-//   pantallaBuscar.style.display = "none";
-// };
-// botonBuscarTipos.addEventListener("click",tipos);
-// botonBuscarDebilidad.addEventListener("click",tipos);
-
-// //Funcion que imprime la data por tipo
-
-// let pantallaPrintTipo = document.getElementById("busqueda-por-tipo"); 
-// let tipo = document.getElementsByClassName("iconos");
-
-// //recorre los elementos de la misma clase y asigana el evento click
-//   for(let i=0; i<tipo.length; i++){
-    
-//     tipo[i].addEventListener("click", printType = (e) => {
-//       if (!e) e= window.event;
-//       let str = " ";
-//       let resultado= " ";
-//       let condicion = e.target.id;
-//       //llama a la funcion Filtrar
-//       resultado = window.filtrar(data,condicion);
-//       //Imprime el resltado de la funcion Filtrar
-//       resultado.forEach(element => {
-//         str += `<li>
-//         <img src="${element.img}">
-//         <p><strong>Numero:</strong>${element.num}</p>
-//         <p><strong>Nombre:</strong> ${element.name}</p>
-//         </li> `;
-//     });
-//       pantallaPrintTipo.innerHTML = str; 
-//       //Oculta la pantalla Tipos
-//       pantallaTipos.style.display = "none";
-//       pantallaPrintTipo.style.display= "block";
-//   });
-//   }
-
-//   //Boton de prueba que aparece seccion de buscar y desaparece pantalla principal
-//   let botonPrueba = document.getElementById("prueba");
   
 //   let myFunction = () => {
 //     pantallaBuscar.style.display = "block";

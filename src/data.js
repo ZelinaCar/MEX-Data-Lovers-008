@@ -3,24 +3,7 @@
 // const example = () => {
 //   return 'example';
 // };
- // FUNCION QUE ORDENA 
- let ordenar = (data,propiedad,orden) => {
-  let resultado = {};
-  if(orden === "ascendente") {
-  resultado = data.sort((a,b) => (a[propiedad] > b[propiedad] ? 1 : -1));
-  } 
-  else if(orden === "descendente") {
-  resultado = data.sort ((a,b) => (a[propiedad] > b[propiedad] ? -1 : 1));
-  }
-  else if(orden === "numAscendente"){
-  resultado = data.sort((a,b) => (a[propiedad] > b[propiedad] ? 1 : -1));
-  }
-  else if (orden === "numDescendente"){
-  resultado = data.sort((a,b) => (a[propiedad] > b[propiedad] ? -1 : 1));
-  }
-  return resultado;
-
-}
+// FUNCION FILTRAR
 
 let filtrar = (data,condicion) => {
   let filtro = data.filter(pokemon => {
@@ -33,11 +16,5 @@ let filtrar = (data,condicion) => {
   });
   return filtro;
 }
-  
-
-window.ordenar= ordenar;
 window.filtrar = filtrar;
-
-
-
 // window.example = example;
