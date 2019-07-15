@@ -1,140 +1,83 @@
-body
-{
-  border: 1px white solid;
-	width:1000px;
-	margin-left:auto;
-	margin-right:auto;
-	padding:0px;
-  font-family: sans-serif;
+/* Estilo para todos los elementos  */
+* { 
+  text-align: center;
+  margin: 0%;
+  border: 0%;
+  padding: 0%;
+}
+body {
+  font-family: "Helvetica", sans-serif;
+  color: #1E427A;
+  font-size: 14 px;
+}
+.seccion {
+  width: 100%;
+  /* height: 300px; */
+  background-color:white;
+  margin-top: 10px;
 }
 
-h1, h2
-{
+#logo {
+  display:block;
+  margin:auto;
+}
+
+#superior{
+ position: -webkit-sticky;
+ position: sticky;
+ top: 0px;
+ left: 0px;
+ width: 100%;
+ height: 130px;
+ margin: 0%;
+}
+
+#cabecera {
+  margin-top: 5%;
+  height: 500px;
+}
+
+h1, h2, h3{
+  padding: 2%;
+}
+ul {
+  list-style: none;
+  padding: 0%;
+  margin: 0%;
+  background: #85C1E9;
+  line-height: 40px;
   text-align: center;
 }
-
-nav
-{
-}
-
-ul
-{
-list-style: none;
-padding: 0;
-margin: 0;
-background: #85C1E9;
-line-height: 40px;
-text-align: center;
-}
-
 li
   {
-  width: 150px;
+  width: 27%;
   display: inline-block;
-  text-align: center;
   }
-
-a
-{
+a {
   text-decoration: none;
   color: #fff;
   display: block;
 }
-
 a:hover {
-  background: #82E0AA;
-  color:#E74C3C;
+  background: #FECF40;
+  color:#1E427A;
 }
 
-
-
-.cuerpo{
-    max-width: 1000px;
-    margin:auto;
-
-     }
-
-.cabecera{
-  background-color: #D6EAF8;
-   margin-top:2px;
-   height: 400px;
-     }
-
-#Logo{
-     display:block;
-     margin:auto;
+/* lista de pokemones Y CAJAS CONTENEDORAS DE LOS POKEMONES */
+#seccion-lista {
+  background-color: #d4fde6; 
 }
-
-
-.superior{
-    background: white;
-    margin-top: 0px;
-    height: 155px;
-    text-align: center;
-     }
-
-
-#caja
-{
-text-align: center;
-background-image: url(https://fotos.subefotos.com/225ae972ac9b4dd22652cc5e2661bb33o.png);
-margin: 1rem;
-padding: 1rem;
-height: 455px;
-}
-
-
-#lista-nombres
-
-{
-  justify-content: center;
-  text-align: center;
-  margin: 1rem;
-  padding: 1rem;
-  overflow: auto;
-  background: ##E7F9FF;
-    width: 50%;
-    height: 350px;
-}
-
-
-#busqueda
-
-  {
-  text-align: center;
-  margin: 1rem;
-  padding: 1rem;
-  height: 455px;
-}
-
-.box
-{
-  align-content: center;
-
-}
-#lista-nombres
-{
-  align-content: center;
-
-}
-
-/*CODIGO DE CSS ZELYNA*/
-
-.titulo { font-weight: bold; }
-
 .caja-lista {
-  background-color: #f3f9fb;
-  border-radius: 5px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 40%;
-  height: 500px;
+  width: 70%;
+  height: 350px;
   overflow: auto;
   justify-content: center;
-  padding: 1%
+  padding: 1%;
+  margin: auto;
 }
-
 .caja-item {
   margin: 10px;
   color: #1650B4;
@@ -145,22 +88,75 @@ height: 455px;
   padding: 5px;
   box-shadow: 2px 2px 7px 1px #1C6EA4;
 }
-
+#caja-item-big {
+  width: 30%;
+  height: 50%;
+  margin: auto;
+  box-shadow: 2px 2px 7px 1px #1C6EA4;
+}
 .caja-item:hover{
-  box-shadow: 2px 2px 7px 1px #FF6B25;
+  box-shadow: 2px 2px 7px 1px #FECF40;
+}
+/* estilo para el select */
+.select {
+  border-style: none;
+  border-radius: 5px;
+  width: 120px;
+  height: 40px;
+  background-color: #d4fde6;
+  margin-bottom: 15px;
 }
 
-.poke-img{
-  padding: 0%;
-  text-align: center;
-  margin: 1%
-  /* width: 25%;
-  height: 25%;   */
+/* INPUT TEXT */
+.caja-texto {
+  background-color: #d4fde6;
+  width: 16%;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  margin: 15px;
 }
 
-.poke-num{
-  margin: 1%;
+/* BOTONES */
+.button {          
+  width: 25%;
+  height: 40px;
+  border-radius: 5px;
+  background-color: #1E427A;
+  border: none;
+  color: #f3f9fb;
+  font-size: 14px;
 }
-.poke-name{
-  margin: 5%;
+.button:hover, .button:focus
+{
+  background-color: #FECF40;
+  color: #1E427A;
+  font-weight: bold;
+}
+#btn-name{
+  width:7%;
+}
+/* ESTILOS RESPONSIVE */
+@media screen and (max-width:640px){
+body, .superior, #lista-nombres, #logo, h1, h2
+{
+    background-color:white;
+    width: 100%;
+    font-size: 12px;
+ }
+ .cabecera {
+ 	position: relative;
+ 	padding-bottom: 56.25%; /* 16:9 */
+ 	padding-top: 25px;
+ 	height: 0;
+ }
+ .cabecera iframe {
+ 	position: absolute;
+ 	top: 0;
+ 	left: 0;
+ 	width: 100%;
+ 	height: 100%;
+ }
+
 }

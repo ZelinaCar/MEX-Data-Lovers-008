@@ -1,109 +1,134 @@
-// // muestra y oculta sections
-//  let btnCatalogo = document.getElementById('btn-catalogo');
-//  let btnBusqueda = document.getElementById("btn-busqueda");
-//  let btnCatalogo = document.getElementById('btn-stats');
-//  let btnBusqueda = document.getElementById("btn-adopta");
+// funcion que muestra en pantalla
+// const muestra = (a, donde) => { 
+//   console.log(donde);
+//   let lista = "";
+//   a.forEach(e => {
+//     lista += `<div id = "${e.name}" class = "caja-item">
+//                     <figure>
+//                       <img src="${e.img}" alt="${e.name}" width="50" height="50" />
+//                     </figure>
+//                       <p>${e.num}</p>
+//                       <p>${e.name}</p>
+//                   </div>`
+//       });
+//   // donde.innerHTML = lista;
+// };
+let btnName = document.getElementById("btn-name"); // boton de busqueda por nombre de pokemon
 
-// const hideSection = id => document.getElementById(id).classList.add('hide');
-// const showSection = id => document.getElementById(id).classList.remove('hide');
-
-// const showCatalog = () => {
-//     hideSection('seccion-inicio');
-//     showSection('seccion-lista');
-// }
-
-// btnCatalogo.addEventListener('click', showCatalog);
-// // logo.addEventListener('click', returnToIndex);
-
-const showList = () => {
-  // ordena los pokemones por nombre de A a Z
-  a = POKEMON.pokemon.sort(function (a, b){ 
-    if ( a.name < b.name ) {  return -1; }  
-    if ( a.name > b.name ) {  return 1;  }
-    return 0;
-  });
-  // muestra en pantalla la lista de pokemones
-  let lista = "";
-   for (i in a)  {
-      lista += `<div class = "caja-item">
-                  <figure class="poke-img">
-                    <img src="${a[i].img}" width="50" height="50" />
-                  </figure>
-                    <p class="poke-num">${a[i].num}</p>
-                    <p class = "poke-name">${a[i].name}</p>
-                </div>`
-      document.getElementById("lista-nombres").innerHTML = lista;
-    } 
-};
-// llena el select para busqueda por tipo
-      // for (i in a)  {
-      //   var idSelect = document.getElementById("select-type");
-      //   var addOption = document.createElement("option");
-      //   idSelect.options.add(addOption, i);
-      //   addOption.text = a[i].num + " - " + a[i].name;  
-      // }
-
-
-// busqueda por tipo
-const busqTipo = () => {
-
-
-
-
-}
-      // for (i in a)  {
-      //   var idSelect = document.getElementById("lista-nombres");
-      //   var addOption = document.createElement("option");
-      //   idSelect.options.add(addOption, i);
-      //   addOption.text = a[i].num + " - " + a[i].name;  
-      // }
-
-
-document.addEventListener("DOMContentLoaded", showList);
-
-
-// leer un nombre y pasarlo a data.js
-//    en data.js leo el nombre y lo devuelvo con mas info aqui
-// envio el resultado a index html para mostrarlo
-
-//funcion que busca por nombre del pokemon
-// let boton = document.getElementById('buscar-nombre');
-// let inputNombre = document.getElementById('nombre-pokemon');
-// let imprimirBusqueda = document.getElementById('busqueda-nombre');
-
-
+// FUNCION QUE BUSCA POR NOMBRE:
 let buscarNombre = () => {
-  let texto = inputNombre.value.toLowerCase();
-  console.log(texto);
-  for(let pokemon of POKEMON.pokemon){
-        let nombre = pokemon.name.toLowerCase();
-        if(nombre.indexOf(texto) !== -1){
-            imprimirBusqueda.innerHTML = `<li>
-            <img src="${pokemon.img}">
-            <p><strong>Numero:</strong>${pokemon.num}</p>
-            <p><strong>Nombre:</strong> ${pokemon.name}</p>
-            </li>`;
-        }
+  let nameBuscar = document.getElementById('txt-name').value.toLowerCase();
+  let resultBuscar = document.getElementById('result-buscar');
+  for (let a of POKEMON.pokemon) {
+    let nombre = a.name.toLowerCase();
+    if (nombre.indexOf(nameBuscar) > -1) {
+      resultBuscar.innerHTML = 
+       `<div class = "caja-item" id = "caja-item-big">
+        <figure>
+          <img src = "${a.img}" width = "75" height = "75" />
+        </figure>
+        <p><strong>Número:</strong> ${a.num}</p>
+        <p><strong>Nombre:</strong> ${a.name}</p>
+        <p><strong>Tipo: </strong>${a.type}</p>
+        <p><strong>Debilidad: </strong>${a.weaknesses}</p>
+        </div>`
     }
-        //console.log(Nombre);
+  }
+  event.preventDefault();
 };
+  btnName.addEventListener('click', buscarNombre);
 
+// FUNCION QUE MUESTRA LA LISTA A - Z DE POKEMONES AL INICIO 
+const listAZ = () => {
+    // ordena los pokemones por nombre de A a Z
+    a = POKEMON.pokemon.sort(function (a, b){ 
+      if ( a.name < b.name ) {  return -1; }  
+      if ( a.name > b.name ) {  return 1;  }
+      return 0;
+    });
+    // muestra en pantalla la lista de pokemones
+    let lista = "";
+     for (i in a)  {
+        lista += `<div class = "caja-item">
+                    <figure>
+                      <img src="${a[i].img}" alt = "${a[i].img}" width="50" height="50" />
+                    </figure>
+                      <p>${a[i].num}</p>
+                      <p>${a[i].name}</p>
+                  </div>`
+        document.getElementById("lista-pokes").innerHTML = lista;
+        }
+      event.preventDefault();
+    };
+  document.addEventListener("DOMContentLoaded", listAZ);
+  document.getElementById("btn-az").addEventListener("click", listAZ);
 
+      // //prueba poke-ficha
+      //   const cajaItem = document.getElementsByClassName("caja-item");
+      //   for (let i = 0; i < cajaItem.length; i++) {
+      //       cajaItem[i].addEventListener ("click", () => {
+      //           const idTarget = event.target.id;
+      //           console.log(idTarget);
+      //     })
+      //   }
+      // fin prueba
 
+// FUNCION QUE MUESTRA LA LISTA ORDENADA de la Z a la A:
+  const showListZA = () => {
+    a = POKEMON.pokemon.sort(function (a, b){ 
+      if ( a.name > b.name ) {  return -1; }  
+      if ( a.name < b.name ) {  return 1;  }
+      return 0;
+    });
+    // muestra en pantalla la lista de pokemones
+    let lista = "";
+     for (i in a)  {
+        lista += `<div class = "caja-item">
+                    <figure class="poke-img">
+                      <img src="${a[i].img}" width="50" height="50" />
+                    </figure>
+                      <p class="poke-num">${a[i].num}</p>
+                      <p class = "poke-name">${a[i].name}</p>
+                  </div>`
+        document.getElementById("lista-pokes").innerHTML = lista;
+      }
+    // event.preventDefault();
+  };
+  document.getElementById("btn-za").addEventListener("click", showListZA);
 
-// const cifrar = () => {
+  // busqueda por tipo
+  let pokemonList = document.getElementById("select-tipo");
+  const busqTipo = () => {
+    let lista = "";
+    let selectPokemon = pokemonList.options[pokemonList.selectedIndex].value;
+    const result = POKEMON.pokemon.filter(pokemon => pokemon.type[0] === selectPokemon);
+    result.forEach(a =>{
+        lista += `<div class = "caja-item">
+                    <figure>
+                      <img src="${a.img}" width="50" height="50" />
+                    </figure>
+                      <p>${a.num}</p>
+                      <p>${a.name}</p>
+                  </div>`
+        document.getElementById("result-buscar").innerHTML = lista;
+    });
+  };
+  pokemonList.addEventListener("change", busqTipo);
 
-//   let cadena = document.getElementById('tarea').value;              //cadena a cifrar 
-//   let offset = parseInt(document.getElementById('offset').value);
-//   cadena = cadena.toUpperCase();
-//   let nuevaCadena = cipher.encode(offset, cadena);
-//   document.getElementById('resultado').value = nuevaCadena;         //valor de la cadena de texto
-//   // document.getElementById('resultado').innerHTML = nuevaCadena;  //para un parrafo
-// }
-// document.getElementById('boton-cifrar').addEventListener('click',cifrar);
-
-
-// document.addEventListener("DOMContentLoaded", function(event) {
-//   console.log("DOM fully loaded and parsed");
-
-// });
+  // llena el select para busqueda por tipo
+        // for (i in a)  {
+        //   var idSelect = document.getElementById("lista-nombres");
+        //   var addOption = document.createElement("option");
+        //   idSelect.options.add(addOption, i);
+        //   addOption.text = a[i].num + " - " + a[i].name;  
+        // } 
+  
+  
+//   let myFunction = () => {
+//     pantallaBuscar.style.display = "block";
+//     mostrar.style.display = "none";
+//     pantallaTipos.style.display = "none";
+//     pantallaPrintTipo.style.display = "none";
+//     pantallaPrintOrden.style.display = "none";
+//   };
+//   botonPrueba.addEventListener("click",myFunction);
